@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card">
+    <div class="dashboard-header">
+      <div>
+        <h2>Welcome, {{ username|capitalize }}!</h2>
+        <p>Your role: {{ role|capitalize }}</p>
+      </div>
+      <div class="dashboard-actions">
+        <a class="button" href="{{ url_for('predict') }}">Predict Marks</a>
+      </div>
+    </div>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Training samples</h3>
+        <p>{{ row_count }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Mean Absolute Error</h3>
+        <p>{{ mae }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>R² Score</h3>
+        <p>{{ r2 }}</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Dataset preview</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              {% for col in columns %}
+              <th>{{ col }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in preview %}
+            <tr>
+              {% for col in columns %}
+              <td>{{ row[col] }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+{% endblock %}

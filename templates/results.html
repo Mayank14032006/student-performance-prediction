@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card result-card">
+    <h2>Prediction Result</h2>
+    <p class="result-value">Estimated Marks: <strong>{{ predicted }}</strong></p>
+
+    <div class="result-summary">
+      <h3>Input summary</h3>
+      <ul>
+        <li>Study Hours: {{ inputs.study_hours }}</li>
+        <li>Attendance: {{ inputs.attendance }}%</li>
+        <li>Assignments Score: {{ inputs.assignments_score }}</li>
+        <li>Participation: {{ inputs.participation }}</li>
+        <li>Previous Grade: {{ inputs.previous_grade }}</li>
+      </ul>
+    </div>
+
+    <a class="button" href="{{ url_for('predict') }}">Predict again</a>
+  </div>
+{% endblock %}

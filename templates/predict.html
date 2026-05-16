@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card form-card">
+    <h2>Predict Student Marks</h2>
+    <form method="post">
+      <label for="study_hours">Study Hours</label>
+      <input id="study_hours" name="study_hours" type="number" min="0" max="20" step="0.1" required />
+
+      <label for="attendance">Attendance (%)</label>
+      <input id="attendance" name="attendance" type="number" min="0" max="100" step="0.1" required />
+
+      <label for="assignments_score">Assignments Score</label>
+      <input id="assignments_score" name="assignments_score" type="number" min="0" max="100" step="0.1" required />
+
+      <label for="participation">Participation (1-10)</label>
+      <input id="participation" name="participation" type="number" min="1" max="10" step="1" required />
+
+      <label for="previous_grade">Previous Grade</label>
+      <input id="previous_grade" name="previous_grade" type="number" min="0" max="100" step="0.1" required />
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+{% endblock %}

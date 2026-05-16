@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card auth-card">
+    <h2>Register</h2>
+    <form method="post">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required autofocus />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required />
+
+      <label for="confirm_password">Confirm Password</label>
+      <input id="confirm_password" name="confirm_password" type="password" required />
+
+      <label for="role">Role</label>
+      <select id="role" name="role" required>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Already registered? <a href="{{ url_for('login') }}">Sign in</a></p>
+  </div>
+{% endblock %}

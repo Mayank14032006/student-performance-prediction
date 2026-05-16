@@ -1,0 +1,14 @@
+{
+  "teacher": {
+    "password": "scrypt:32768:8:1$uAHyjWzI55iUc3fD$8705b2df1b5681d3d5ef4881222defe06b0f89179630b4736c23a1f404cb469803a884089180d8be2766467cb63a8d7357da9c1b43f85370e7711e2a69635ee7",
+    "role": "teacher"
+  },
+  "student": {
+    "password": "scrypt:32768:8:1$EmAGlXjeBv9EXGGB$87665079b172406d7b990289bd90c419db1c84b715dad6d8f7ad9e7033c960ee3e0ee441b83248fcb3ec2a135ea042c6ce823dfd59f82835f64211c158ae6deb",
+    "role": "student"
+  },
+  "mayank chudasama": {
+    "password": "scrypt:32768:8:1$ix7oltRcYt0vPdgA$d3bcbb8f6bd83bd025a2d1ac5ffa2edffb9bdbb841808b8890a99741cc957d7baa05482e87eafafe450afbcbac6967be545a49a4804b72260fa3882f9a426867",
+    "role": "student"
+  }
+}
